@@ -86,6 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!checkCooldown()) {
                 return;
             }
+
+            // Vérifier le token Turnstile
+            const turnstileResponse = turnstile.getResponse();
+            if (!turnstileResponse) {
+                showNotification('Please complete the captcha', 'error');
+                return;
+            }
             
             const submitBtn = contactForm.querySelector('.submit-btn');
             const btnText = submitBtn.querySelector('.btn-text');
@@ -100,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('entry.2072810337', document.getElementById('name').value);
             formData.append('entry.1822818382', document.getElementById('email').value);
             formData.append('entry.1414799093', document.getElementById('message').value);
+            formData.append('cf-turnstile-response', turnstileResponse);
 
             try {
                 const response = await fetch(
@@ -113,6 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         body: new URLSearchParams(formData)
                     }
                 );
+
+                // Réinitialiser le captcha
+                turnstile.reset();
 
                 // Enregistrer le temps de soumission
                 localStorage.setItem('lastSubmitTime', Date.now().toString());
