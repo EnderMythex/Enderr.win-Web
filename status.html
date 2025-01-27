@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Status</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js"></script>
+    <script src="js/status.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,20 +18,44 @@
     </div>
     <div class="container">
         <div class="profile">
-            <h1>EnderMythex</h1>
-            <p class="bio">HTML5 / CSS3 / JS Developer</p>
+            <h1>Services Status</h1>
+            <p class="bio">Check the status of my services</p>
         </div>
         <div class="links">
-            <a href="#" class="link-item">home</a>
+            <a href="./index.html" class="link-item">home</a>
             <!-- <a href="./tools.html" class="link-item">tools</a> -->
             <a href="./projects.html" class="link-item">projects</a>
-            <a href="./status.html" class="link-item">status</a>
+            <a href="#" class="link-item">status</a>
             <a href="./contact.html" class="link-item">contact</a>
         </div>
-        <a href="https://cybercookie.party" class="project">
-            <div class="project-title">⭐ Best Project : CyberCookie</div>
-            <div class="project-description">A game created by EnderMythex</div>
-        </a>
+        
+        <!-- Ajout de la grille de statut -->
+        <div class="status-grid">
+            <div class="status-container">
+                <div class="status-title">🌐 cybercookie.party</div>
+                <div class="status-indicator status-loading">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking...</span>
+                </div>
+            </div>
+            
+            <div class="status-container">
+                <div class="status-title">🌐 enderr.win</div>
+                <div class="status-indicator status-loading">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking...</span>
+                </div>
+            </div>
+            
+            <div class="status-container">
+                <div class="status-title">🌐 endermythex.github.io</div>
+                <div class="status-indicator status-loading">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking...</span>
+                </div>
+            </div>
+        </div>
+        
         <div class="social-icons">
             <a href="https://x.com/Endermythex7" class="social-icon" title="Twitter">
                 <svg viewBox="0 0 24 24">

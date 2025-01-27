@@ -25,6 +25,7 @@
             <a href="./index.html" class="link-item">home</a>
             <!-- <a href="./tools.html" class="link-item">tools</a> -->
             <a href="./projects.html" class="link-item">projects</a>
+            <a href="./status.html" class="link-item">status</a>
             <a href="#" class="link-item">contact</a>
         </div>
         <form id="contact-form" class="contact-form">
@@ -37,13 +38,15 @@
             <div class="form-group">
                 <textarea id="message" name="message" required placeholder="Your message"></textarea>
             </div>
-            <div class="form-group">
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA6dKvfxuxDGU0jf"></div>
+            <div class="form-submit-group">
+                <div class="turnstile-container">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAA6dKvfxuxDGU0jf" data-theme="dark"></div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send</span>
+                    <div class="btn-loader hidden"></div>
+                </button>
             </div>
-            <button type="submit" class="submit-btn">
-                <span class="btn-text">Send</span>
-                <div class="btn-loader hidden"></div>
-            </button>
         </form>
         <div class="social-icons">
             <a href="https://x.com/Endermythex7" class="social-icon" title="Twitter">
