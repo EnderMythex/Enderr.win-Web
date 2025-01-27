@@ -23,6 +23,7 @@ body {
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
+    border-radius: 10px;
 }
 
 .profile {
@@ -401,5 +402,19 @@ h1 {
         left: 10px;
         font-size: 0.8rem;
         padding: 0.8rem 1.2rem;
+    }
+}
+
+/* Styles pour le widget Turnstile */
+.cf-turnstile {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .cf-turnstile {
+        transform: scale(0.9);
+        transform-origin: center;
     }
 }
