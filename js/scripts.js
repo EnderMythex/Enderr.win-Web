@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ]).then(() => {
         loader.classList.add('hidden');
     });
+
+    // Mettre à jour les informations réseau
+    updateNetworkInfo();
+    
+    // Mettre à jour le ping toutes les 10 secondes
+    setInterval(() => {
+        updateNetworkInfo();
+    }, 2000);
 });
 
 // Afficher le loader lors de la navigation
@@ -143,3 +151,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Modifier la fonction updateNetworkInfo
+async function updateNetworkInfo() {
+    const ipElement = document.querySelector('.ip-address');
+    const pingElement = document.querySelector('.ping');
+    // Sauvegarder l'état de visibilité actuel
+    const wasHidden = ipElement.classList.contains('hidden');
+
+    try {
+        // Récupérer l'IP
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        
+        // Créer le contenu de l'élément IP
+        ipElement.innerHTML = `<span>IP: ${ipData.ip}</span><button class="toggle-ip" title="Toggle IP visibility">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </button>`;
+        
+        // Restaurer l'état de visibilité précédent ou cacher par défaut si c'est le premier chargement
+        if (wasHidden || (!wasHidden && !ipElement.classList.contains('initialized'))) {
+            ipElement.classList.add('hidden');
+        }
+        ipElement.classList.add('initialized');
+        
+        // Mettre à jour l'icône en fonction de l'état actuel
+        const toggleButton = ipElement.querySelector('.toggle-ip');
+        if (!ipElement.classList.contains('hidden')) {
+            toggleButton.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>`;
+        }
+        
+        // Ajouter l'écouteur d'événements pour le bouton
+        toggleButton.addEventListener('click', () => {
+            ipElement.classList.toggle('hidden');
+            if (ipElement.classList.contains('hidden')) {
+                toggleButton.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>`;
+            } else {
+                toggleButton.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>`;
+            }
+        });
+
+        // Mesurer le ping
+        const startTime = performance.now();
+        await fetch('https://api.ipify.org?format=json');
+        const endTime = performance.now();
+        const pingTime = Math.round(endTime - startTime);
+        pingElement.textContent = `Ping: ${pingTime}ms`;
+
+    } catch (error) {
+        ipElement.textContent = 'IP: Error';
+        pingElement.textContent = 'Ping: Error';
+        console.error('Network info error:', error);
+    }
+}
