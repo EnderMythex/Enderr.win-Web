@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Speed Test</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/speed-test.js" defer></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -17,68 +18,46 @@
     </div>
     <div class="container">
         <div class="profile">
-            <h1>My Projects</h1>
-            <p class="bio">Discover my playful creations</p>
+            <h1>Speed Test</h1>
+            <p class="bio">Test your connection speed</p>
         </div>
         <div class="links">
             <a href="./index.html" class="link-item">home</a>
-            <a href="#" class="link-item">projects</a>
+            <a href="./projects.html" class="link-item">projects</a>
             <a href="./tools.html" class="link-item">tools</a>
             <a href="./status.html" class="link-item">status</a>
             <a href="./contact.html" class="link-item">contact</a>
         </div>
-        <div class="projects-grid">
-            <a href="https://github.com/EnderMythex/Cyber-Cookie" class="project-card">
-                <img src="images/cybercookie.png" alt="CyberCookie" class="project-image">
-                <div class="project-overlay">
-                    <div class="project-title">🕹️ CyberCookie</div>
-                    <div class="project-description">A modern, cyberpunk reinvention of Cookie Clicker available as a browser extension and web game.</div>
-                    <div class="project-tags">
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">JS</span>
-                    </div>
+        
+        <div class="speed-test-container">
+            <div class="speed-info">
+                <div class="speed-card">
+                    <div class="speed-label">Download</div>
+                    <div class="speed-value" id="download-speed">-- Mbps</div>
                 </div>
-            </a>
+                <div class="speed-card">
+                    <div class="speed-label">Upload</div>
+                    <div class="speed-value" id="upload-speed">-- Mbps</div>
+                </div>
+                <div class="speed-card">
+                    <div class="speed-label">Ping</div>
+                    <div class="speed-value" id="ping-value">-- ms</div>
+                </div>
+            </div>
             
-            <a href="https://github.com/EnderMythex/EnderHomeBrowser" class="project-card">
-                <img src="images/enderhome.png" alt="EnderHomeBrowser" class="project-image">
-                <div class="project-overlay">
-                    <div class="project-title">🌐 EnderHomeBrowser</div>
-                    <div class="project-description">A custom extension that transforms your new tab into a modern dashboard with useful widgets.</div>
-                    <div class="project-tags">
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">JS</span>
-                    </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="test-progress"></div>
                 </div>
-            </a>
+                <div class="progress-text" id="progress-status">Ready to start</div>
+            </div>
             
-            <a href="https://github.com/EnderMythex/HTML-CSS-Code-Viewer" class="project-card">
-                <img src="images/codeviewer.png" alt="Code Viewer" class="project-image">
-                <div class="project-overlay">
-                    <div class="project-title">📸 HTML & CSS Code Viewer</div>
-                    <div class="project-description">An interactive HTML and CSS code editor with real-time preview and a sidebar.</div>
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                    </div>
-                </div>
-            </a>
+            <button id="start-test" class="start-test-btn">Start Test</button>
             
-            <a href="https://github.com/EnderMythex/Enderr.win-Web" class="project-card">
-                <img src="images/portfolio.png" alt="Portfolio Website" class="project-image">
-                <div class="project-overlay">
-                    <div class="project-title">🚀 EnderMythex Website</div>
-                    <div class="project-description">My personal website, built with HTML, CSS, and JS.</div>
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                    </div>
-                </div>
-            </a>
+            <div class="server-info">
+                <div class="server-label">Selected Server:</div>
+                <div class="server-value" id="server-name">Detecting best server...</div>
+            </div>
         </div>
         <div class="social-icons">
             <a href="https://x.com/Endermythex7" class="social-icon" title="Twitter">
@@ -107,4 +86,4 @@
         </footer>
     </div>
 </body>
-</html> 
+</html>
