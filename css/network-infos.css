@@ -1,0 +1,66 @@
+/* Ajout des styles pour les informations réseau */
+.network-info {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ip-address, .ping {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@media screen and (max-width: 640px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .network-info {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Ajout des styles pour l'IP masquée et le bouton */
+.ip-address {
+    display: flex;
+    align-items: center;
+}
+
+.ip-address span {
+    margin-right: 0.3rem;
+}
+
+.ip-address.hidden span {
+    filter: blur(4px);
+    user-select: none;
+}
+
+.toggle-ip {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-ip:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.toggle-ip svg {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}

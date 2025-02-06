@@ -1,0 +1,80 @@
+/* Styles pour les status containers */
+.status-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.status-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 450px;
+}
+
+.status-container:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.status-title {
+    font-size: 0.9rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-online .status-dot {
+    background-color: #4CAF50;
+}
+
+.status-offline .status-dot {
+    background-color: #f44336;
+}
+
+.status-loading .status-dot {
+    background-color: #FFC107;
+}
+
+.status-online {
+    color: #4CAF50;
+}
+
+.status-offline {
+    color: #f44336;
+}
+
+.status-loading {
+    color: #FFC107;
+}
+
+@media screen and (max-width: 480px) {
+    .status-container {
+        width: 90%;
+        padding: 1rem;
+    }
+}
