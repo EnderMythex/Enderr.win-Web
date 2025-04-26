@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let drops = []; // Array of drops
     let brightness = []; // Array for character brightness
-    let fontSize = 7; // Légèrement plus petit pour augmenter la densité
+    let fontSize = 9; // Légèrement plus petit pour augmenter la densité
     
     // Setting canvas size
     function resizeCanvas() {
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Drawing the characters
     function draw() {
         // Black background with opacity
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.04)'; // Opacité légèrement réduite pour effet plus doux
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.21)'; // Opacité légèrement réduite pour effet plus doux
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Draw each character in the matrix
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Garder la luminosité dans une plage acceptable
             if (brightness[i] < 0.4) brightness[i] = 0.4;
-            if (brightness[i] > 0.1) brightness[i] = 0.1;
+            if (brightness[i] > 1.1) brightness[i] = 0.1;
             
             // Select a random character
             const char = chars.charAt(Math.floor(Math.random() * chars.length));
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset the drop if it reaches the bottom or randomly
             if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
                 drops[i] = Math.floor(Math.random() * -10);
-                brightness[i] = 0.0 + Math.random() * 0.5; // Reset brightness
+                brightness[i] = 2.0 + Math.random() * 2.5; // Reset brightness
             }
         }
     }
