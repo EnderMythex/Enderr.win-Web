@@ -53,40 +53,6 @@
     font-weight: 600;
 }
 
-.discord-badges {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.discord-badge {
-    width: 22px;
-    height: 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: #4f545c;
-    font-size: 12px;
-}
-
-.nitro-badge {
-    background-color: #ff73fa;
-}
-
-.rawr-badge {
-    background-color: #f47fff;
-}
-
-.boost-badge {
-    background-color: #43b581;
-}
-
-.developer-badge {
-    background-color: #5865f2;
-}
-
 /* Status Section */
 .discord-status-section {
     display: flex;
@@ -146,6 +112,7 @@
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
+    border-left: 3px solid #ffffff;
 }
 
 .discord-current-activity:first-child {
@@ -197,7 +164,7 @@
 .activity-name {
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.842);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
