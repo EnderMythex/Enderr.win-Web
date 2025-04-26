@@ -1,0 +1,1424 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background-color: #000;
+    background: radial-gradient(circle at center, #050505 0%, #000000 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: 
+        linear-gradient(90deg,
+            transparent 99%,
+            rgba(255, 255, 255, 0.015) 100%
+        ),
+        linear-gradient(180deg,
+            transparent 99%,
+            rgba(255, 255, 255, 0.015) 100%
+        );
+    background-size: 50px 50px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.01) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
+} */
+
+/* .container {
+    width: 100%;
+    max-width: 600px;
+    min-width: 280px;
+    background: rgba(5, 5, 5, 0.95);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 0.8rem;
+    color: #fff;
+} */
+
+/* .bio {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+} */
+
+/* .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.link-item {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.link-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.link-item:hover {
+    color: #fff;
+}
+
+.link-item:hover::after {
+    transform: scaleX(1);
+} */
+
+/* .project {
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:first-of-type {
+    margin-top: 2rem;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.project:hover::before {
+    transform: translateX(0);
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-title {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+} */
+
+/* .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .links {
+        padding: 0;
+        gap: 0.8rem;
+    }
+
+    .link-item {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+
+    .project {
+        padding: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .project:first-of-type {
+        margin-top: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+} */
+
+/* Loader styles
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+.loader-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+/* Styles pour les cartes de jeux
+.game-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.game-details {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.game-tag {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+.game-card:hover .game-tag {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 480px) {
+    .game-details {
+        margin-top: 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .game-tag {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
+} */
+
+/* Styles pour le formulaire de contact
+.contact-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1rem;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.form-submit-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.turnstile-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    flex: 0.5;
+    min-width: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.btn-loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    display: none;
+}
+
+.btn-loader.visible {
+    display: block;
+}
+
+.btn-text.hidden {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 640px) {
+    .form-submit-group {
+        flex-direction: column;
+    }
+    
+    .turnstile-container {
+        width: 100%;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+} */
+
+/* Styles pour les notifications
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    font-size: 0.9rem;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-left: 4px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notification.success {
+    border-color: #4CAF50;
+}
+
+.notification.error {
+    border-color: #f44336;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 480px) {
+    .notification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+        padding: 0.8rem 1.2rem;
+    }
+} */
+
+/* Styles pour le widget Turnstile */
+.turnstile-container {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.turnstile-container:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cf-turnstile {
+    margin: 0;
+}
+
+.cf-turnstile iframe {
+    border-radius: 2px;
+    background: transparent;
+}
+
+@media screen and (max-width: 480px) {
+    .turnstile-container {
+        padding: 0.6rem;
+    }
+    
+    .cf-turnstile {
+        transform: scale(0.92);
+        transform-origin: center;
+    }
+}
+
+/* Nouvelle grille de projets
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        transparent 100%
+    );
+}
+
+.project-title {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+} */
+
+/* Styles pour les status containers
+.status-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.status-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 450px;
+}
+
+.status-container:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.status-title {
+    font-size: 0.9rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-online .status-dot {
+    background-color: #4CAF50;
+}
+
+.status-offline .status-dot {
+    background-color: #f44336;
+}
+
+.status-loading .status-dot {
+    background-color: #FFC107;
+}
+
+.status-online {
+    color: #4CAF50;
+}
+
+.status-offline {
+    color: #f44336;
+}
+
+.status-loading {
+    color: #FFC107;
+}
+
+@media screen and (max-width: 480px) {
+    .status-container {
+        width: 90%;
+        padding: 1rem;
+    }
+} */
+
+/* Styles pour le Discord container
+.discord-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.discord-container:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.discord-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.discord-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.discord-user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.discord-username {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.discord-discriminator {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.discord-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.discord-badge {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord-badge svg {
+    width: 100%;
+    height: 100%;
+}
+
+.discord-activity {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.discord-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.discord-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.discord-status-online {
+    background-color: #43b581;
+}
+
+.discord-status-idle {
+    background-color: #faa61a;
+}
+
+.discord-status-dnd {
+    background-color: #f04747;
+}
+
+.discord-status-offline {
+    background-color: #747f8d;
+}
+
+.discord-status-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.discord-current-activity {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.discord-current-activity:first-child {
+    margin-top: 0;
+}
+
+.activity-icon {
+    font-size: 1.1rem;
+} */
+
+/* Styles pour Spotify
+.spotify-activity {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.spotify-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+}
+
+.spotify-info {
+    flex: 1;
+}
+
+.spotify-song {
+    color: #fff;
+    font-weight: 500;
+}
+
+.spotify-artist {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+.spotify-timestamp {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+} */
+
+/* Style pour les liens web
+.web-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.web-link:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .discord-container {
+        padding: 1rem;
+    }
+    
+    .discord-avatar {
+        width: 48px;
+        height: 48px;
+    }
+} */
+
+/* Style pour la bulle de lien
+.discord-link-bubble {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.discord-link-bubble .fire-icon {
+    color: #faa61a;
+} */
+
+/* Ajout des styles pour les informations réseau
+.network-info {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ip-address, .ping {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@media screen and (max-width: 640px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .network-info {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+} */
+
+/* Styles pour la page temp-mail
+.temp-mail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.email-generator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.temp-email {
+    flex: 1 1 200px;
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.copy-btn, .refresh-btn {
+    flex: 0 1 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.copy-btn:hover, .refresh-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.inbox {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.inbox-header {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inbox-title {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.mail-count {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
+
+.mail-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.mail-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mail-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mail-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.mail-sender {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.mail-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+.mail-subject {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.mail-preview {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.empty-inbox {
+    padding: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Modal styles
+.mail-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(5, 5, 5, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90%;
+    width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 999;
+}
+
+.modal-header {
+    margin-bottom: 1.5rem;
+}
+
+.modal-subject {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modal-info {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.modal-content {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+    .email-generator {
+        flex-direction: column;
+        padding: 0.8rem;
+        gap: 0.5rem;
+    }
+    
+    .temp-email {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+    
+    .copy-btn, .refresh-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+} */
+
+/* Ajouter ces styles pour les nouveaux éléments
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex: 0 1 auto;
+}
+
+.report-btn {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.2);
+    padding: 0.5rem 0.8rem;
+    color: rgba(244, 67, 54, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.report-btn:hover {
+    background: rgba(244, 67, 54, 0.15);
+    transform: translateY(-1px);
+}
+
+.report-btn svg {
+    stroke: rgba(244, 67, 54, 0.9);
+}
+
+@media screen and (max-width: 640px) {
+    .button-group {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .report-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+} */
+
+/* Ajout des styles pour l'IP masquée et le bouton
+.ip-address {
+    display: flex;
+    align-items: center;
+}
+
+.ip-address span {
+    margin-right: 0.3rem;
+}
+
+.ip-address.hidden span {
+    filter: blur(4px);
+    user-select: none;
+}
+
+.toggle-ip {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-ip:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.toggle-ip svg {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+} */
+
+/* Styles pour la barre de défilement
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Pour Firefox */
+/* * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.3);
+} */
+
+/* Styles pour l'email en bas de page
+.email-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media screen and (max-width: 480px) {
+    .email-info {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .email-link {
+        font-size: 0.8rem;
+    }
+} */
+
+/* Styles pour le footer
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 0;
+    border-top: none;
+}
+
+.footer .email-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 0.3rem 0;
+    transition: all 0.3s ease;
+}
+
+.footer .email-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.footer .email-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .email-link:hover::after {
+    transform: scaleX(1);
+}
+
+.footer .copyright {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+        padding-top: 0;
+    }
+    
+    .footer .email-link,
+    .footer .copyright {
+        font-size: 0.7rem;
+    }
+} */
+
+/* Speed Test Styles
+.speed-test-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.speed-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.speed-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.speed-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.speed-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+}
+
+.speed-value {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.start-test-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.start-test-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.start-test-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.server-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.server-value {
+    color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+    .speed-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .speed-card {
+        padding: 1rem;
+    }
+    
+    .speed-value {
+        font-size: 1.2rem;
+    }
+} */

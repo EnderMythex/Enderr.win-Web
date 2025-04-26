@@ -1,0 +1,31 @@
+/* Styles pour Spotify */
+.spotify-activity {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.spotify-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+}
+
+.spotify-info {
+    flex: 1;
+}
+
+.spotify-song {
+    color: #fff;
+    font-weight: 500;
+}
+
+.spotify-artist {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+.spotify-timestamp {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+}

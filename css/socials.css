@@ -1,0 +1,55 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .links {
+        padding: 0;
+        gap: 0.8rem;
+    }
+
+    .link-item {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+
+    .project {
+        padding: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .project:first-of-type {
+        margin-top: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+}

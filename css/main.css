@@ -1,0 +1,353 @@
+/* @import 'old_main.css' */
+
+@import 'loader.css';
+@import 'contact-form.css';
+@import 'notification.css';
+@import 'projects-grid.css';
+@import 'status-grid.css';
+@import 'discord.css';
+@import 'spotify.css';
+@import 'network-infos.css';
+@import 'temp-mail.css';
+@import 'footer.css';
+@import 'socials.css';
+@import 'speed-test.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background-color: #000;
+    background: radial-gradient(circle at center, #050505 0%, #000000 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: 
+        linear-gradient(90deg,
+            transparent 99%,
+            rgba(255, 255, 255, 0.015) 100%
+        ),
+        linear-gradient(180deg,
+            transparent 99%,
+            rgba(255, 255, 255, 0.015) 100%
+        );
+    background-size: 50px 50px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.01) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+/* Styles pour la barre de défilement */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Pour Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.3);
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.link-item {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.link-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.link-item:hover {
+    color: #fff;
+}
+
+.link-item:hover::after {
+    transform: scaleX(1);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    min-width: 280px;
+    background: rgba(5, 5, 5, 0.7);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 0.8rem;
+    color: #fff;
+}
+
+.project {
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.project:first-of-type {
+    margin-top: 2rem;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.project:hover::before {
+    transform: translateX(0);
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-title {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+}
+
+/* Style pour les liens web */
+.web-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.web-link:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .discord-container {
+        padding: 1rem;
+    }
+    
+    .discord-avatar {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.error-message,
+.maintenance-message {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.maintenance-message {
+    line-height: 1.6;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-image {
+    z-index: 1;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.project-overlay {
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+}
+
+.projects-grid img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    filter: none !important;
+}
+
+.project-description {
+    overflow: visible !important;
+    max-height: none !important;
+    display: block !important;
+}
+
+/* Assurer que les éléments interactifs sont au-dessus du canvas */
+a, button, input, textarea, .link-item, .social-icon, .project-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuster les conteneurs specifiques */
+.discord-container, .speed-test-container, .temp-mail-container, .status-grid {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.discord-container {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    z-index: 1;
+}
+
+/* Ajustement pour les problèmes de grille */
+.projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 1.5rem 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.project-card {
+    display: block !important;
+    aspect-ratio: 1 / 1 !important;
+    position: relative !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .project-card {
+        aspect-ratio: 4/3 !important;
+    }
+    
+    .project-overlay {
+        min-height: 50% !important;
+    }
+}
