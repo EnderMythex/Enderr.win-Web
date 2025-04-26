@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const containers = document.querySelectorAll('.container');
         containers.forEach(container => {
-            container.style.backgroundColor = 'rgba(5, 5, 5, 0.7)';
+            container.style.backgroundColor = 'rgba(5, 5, 5, 0.78)';
             container.style.backdropFilter = 'blur(3px)';
             container.style.position = 'relative';
             container.style.zIndex = '1';
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Initial position of each drop
             drops[i] = Math.floor(Math.random() * -canvas.height / fontSize);
             // Initial brightness (0.5-1)
-            brightness[i] = 0.5 + Math.random() * 0.5;
+            brightness[i] = 1.1 + Math.random() * 1.1;
         }
     }
     
@@ -129,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Draw each character in the matrix
         for (let i = 0; i < drops.length; i++) {
             // Faire varier la luminosité pour chaque colonne
-            brightness[i] += (Math.random() * 0.02 - 0.01);
+            brightness[i] += (Math.random() * 0.00 - 0.00);
             
             // Garder la luminosité dans une plage acceptable
             if (brightness[i] < 0.4) brightness[i] = 0.4;
-            if (brightness[i] > 1) brightness[i] = 1;
+            if (brightness[i] > 0.1) brightness[i] = 0.1;
             
             // Select a random character
             const char = chars.charAt(Math.floor(Math.random() * chars.length));
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset the drop if it reaches the bottom or randomly
             if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
                 drops[i] = Math.floor(Math.random() * -10);
-                brightness[i] = 0.5 + Math.random() * 0.5; // Reset brightness
+                brightness[i] = 0.0 + Math.random() * 0.5; // Reset brightness
             }
         }
     }
