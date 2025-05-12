@@ -21,8 +21,10 @@
 }
 
 body {
-    background-color: #000;
-    background: radial-gradient(circle at center, #050505 0%, #000000 100%);
+    background-image: url("../images/background.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -34,26 +36,7 @@ body {
     z-index: 0;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: 
-        linear-gradient(90deg,
-            transparent 99%,
-            rgba(255, 255, 255, 0.015) 100%
-        ),
-        linear-gradient(180deg,
-            transparent 99%,
-            rgba(255, 255, 255, 0.015) 100%
-        );
-    background-size: 50px 50px;
-    pointer-events: none;
-    opacity: 0.7;
-}
+
 
 body::after {
     content: '';
@@ -303,7 +286,6 @@ a, button, input, textarea, .link-item, .social-icon, .project-card {
 .discord-container, .speed-test-container, .temp-mail-container, .status-grid {
     position: relative;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .discord-container {
